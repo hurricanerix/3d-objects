@@ -16,31 +16,31 @@
 module shapes()
 {
     union() {
-    translate([0.5, 1.5, -0.5])
+    translate([2, 5, -0.5])
     linear_extrude(2, center=false, convexity=10, twist=0)
-    square(size=[3,1]);
+    square(size=[15,2]);
         
-    translate([1.5, 0.5, -0.5])
+    translate([5, 2, -0.5])
     linear_extrude(2, center=false, convexity=10, twist=0)
-    square(size=[1,3]);
+    square(size=[2,15]);
         
-    translate([6.5, 6.5, -0.5])
+    translate([23, 23, -0.5])
     linear_extrude(2, center=false, convexity=10, twist=0)
-    square(3);
+    square(15);
         
-    translate([2, 8.0, -0.5])
+    translate([9, 31.0, -0.5])
     linear_extrude(2, center=false, convexity=10, twist=0)
-    circle(1.5, $fn=20);
+    circle(d=15, $fn=20);
         
-    translate([6.5, 0.5, -0.5])
+    translate([23, 2, -0.5])
     linear_extrude(2, center=false, convexity=10, twist=0)
-    polygon([[0,0],[3,0],[0,3]], paths=[[0,1,2]]);
+    polygon([[0,0],[15,0],[0,15]], paths=[[0,1,2]]);
     }
 }
 
 difference() {
-    linear_extrude(0.5, center=false, convexity=10, twist=0)
-    square(10);
+    linear_extrude(1, center=false, convexity=10, twist=0)
+    square(40);
     
     shapes();
 }
